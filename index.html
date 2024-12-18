@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet Universitario</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulario para ingresar información -->
+        <form id="info-form">
+            <h2>Ingresa tus datos</h2>
+            <label for="image">Foto:</label>
+            <input type="file" id="image" accept="image/*">
+            
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre completo" required>
+            
+            <label for="career">Carrera:</label>
+            <input type="text" id="career" placeholder="Ingresa tu carrera" required>
+            
+            <label for="carnet">Carnet:</label>
+            <input type="text" id="carnet" placeholder="Ingresa tu carnet" required>
+            
+            <button type="submit">Generar Carnet</button>
+        </form>
+
+        <!-- Tarjeta del carnet -->
+        <main class="card" id="card" style="display: none;">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Universidad" id="university-logo">
+            </div>
+            <div class="photo">
+                <img id="card-image" src="" alt="Foto del carnet">
+                <p>Foto Estudiante</p>
+            </div>
+            <div class="info">
+                <h1 id="card-name">Nombre Completo</h1>
+                <h3 id="card-career">Carrera</h3>
+                <h5 id="card-carnet">Carnet</h5>
+                <p>Universidad de San Carlos de Guatemala</p>
+                <p>Facultad de Ingeniería</p>
+                <p>Introducción a la Programación y Computación 2</p>
+            </div>
+        </main>
+
+        <!-- Botón para generar un nuevo carnet -->
+        <button id="new-card-btn" style="display: none; margin-top: 20px;">Generar Nuevo Carnet</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

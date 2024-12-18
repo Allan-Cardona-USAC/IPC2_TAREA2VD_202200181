@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    background-color: #e6f0ff;
+    padding: 20px;
+    border: 2px solid #b3d1ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button, #new-card-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover, #new-card-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Tarjeta del carnet */
+.card {
+    background-color: #fff;
+    border: 2px solid #85b6ff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Logo de la universidad */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Foto del carnet */
+.photo {
+    width: 150px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Información */
+.info {
+    flex: 1;
+    text-align: left;
+}
+
+h1, h3, h5 {
+    margin: 10px 0;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .photo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+}
